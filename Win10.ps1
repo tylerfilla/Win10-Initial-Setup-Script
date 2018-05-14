@@ -6,7 +6,7 @@
 ##########
 
 # Default preset
-$tweaks = @(
+$default = @(
 	### Require administrator privileges ###
 	"RequireAdmin",
 
@@ -2484,20 +2484,35 @@ Function Restart {
 # Parse parameters and apply tweaks
 ##########
 
-# Normalize path to preset file
-$preset = ""
-$PSCommandArgs = $args
-If ($args -And $args[0].ToLower() -eq "-preset") {
-	$preset = Resolve-Path $($args | Select-Object -Skip 1)
-	$PSCommandArgs = "-preset `"$preset`""
+$tweaks = @()
+$PSCommandArgs = @()
+
+# Use default preset if no arguments were passed
+If ($args.Length -eq 0) {
+    $tweaks = $default
 }
 
-# Load function names from command line arguments or a preset file
-If ($args) {
-	$tweaks = $args
-	If ($preset) {
-		$tweaks = Get-Content $preset -ErrorAction Stop | ForEach { $_.Trim() } | Where { $_ -ne "" -and $_[0] -ne "#" }
-	}
+# Parse and normalize passed arguments
+$i = 0
+While ($i -lt $args.Length) {
+    If ($args[$i].ToLower() -eq "-include") {
+        # Normalize path to the included file
+        $include = Resolve-Path $args[++$i]
+        $PSCommandArgs += "-include `"$include`""
+        # Dot-source the included file - use with caution, see https://github.com/Disassembler0/Win10-Initial-Setup-Script#advanced-usage
+        . $include
+    } ElseIf ($args[$i].ToLower() -eq "-preset") {
+        # Normalize path to the preset file
+        $preset = Resolve-Path $args[++$i]
+        $PSCommandArgs += "-preset `"$preset`""
+        # Load tweak names from the preset file
+        $tweaks += Get-Content $preset -ErrorAction Stop | ForEach { $_.Trim() } | Where { $_ -ne "" -and $_[0] -ne "#" }
+    } Else {
+        $PSCommandArgs += $args[$i]
+        # Load tweak names from command line
+        $tweaks += $args[$i]
+    }
+    $i++
 }
 
 # Call the desired tweak functions
