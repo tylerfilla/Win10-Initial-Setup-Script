@@ -72,7 +72,7 @@ $tweaks = @(
 	# "DisableFastStartup",         # "EnableFastStartup",
 
 	### UI Tweaks ###
-	"DisableActionCenter",          # "EnableActionCenter",
+	"EnableActionCenter",           # "DisableActionCenter",
 	"HideAccountProtectionWarn",    # "ShowAccountProtectionWarn",
 	"EnableLockScreen",             # "DisableLockScreen",
 	# "DisableLockScreenRS1",       # "EnableLockScreenRS1",
