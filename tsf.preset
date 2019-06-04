@@ -22,7 +22,6 @@ DisableWebSearch                # EnableWebSearch
 DisableAppSuggestions           # EnableAppSuggestions
 DisableActivityHistory          # EnableActivityHistory
 DisableBackgroundApps           # EnableBackgroundApps
-DisableLocationTracking,        # EnableLocationTracking        # TODO(tyler): Originally default, but is this still available?
 # DisableSensors                # EnableSensors
 DisableLocation                 # EnableLocation
 DisableMapUpdates               # EnableMapUpdates
@@ -75,7 +74,6 @@ SetDEPOptOut                    # SetDEPOptIn
 # DisableUpdateDriver           # EnableUpdateDriver
 # DisableUpdateAutoDownload     # EnableUpdateAutoDownload
 DisableMaintenanceWakeUp        # EnableMaintenanceWakeUp
-DisableUpdateRestart,           # EnableUpdateRestart           # TODO(tyler): Originally default, but is this still available?
 # DisableHomeGroups             # EnableHomeGroups
 DisableSharedExperiences        # EnableSharedExperiences
 # EnableClipboardHistory        # DisableClipboardHistory
@@ -100,12 +98,10 @@ EnableHibernation               # DisableHibernation            # tsf set on 4 J
 
 ### UI Tweaks ###
 EnableActionCenter              # DisableActionCenter           # tsf set on 2 August 2018
-HideAccountProtectionWarn       # ShowAccountProtectionWarn     # TODO(tyler): Originally default, but is this still available?
 EnableLockScreen                # DisableLockScreen             # tsf set on 7 July 2018
 # DisableLockScreenRS1          # EnableLockScreenRS1
 HideNetworkFromLockScreen       # ShowNetworkOnLockScreen
 HideShutdownFromLockScreen      # ShowShutdownOnLockScreen
-DisableStickyKeys               # EnableStickyKeys              # TODO(tyler): Originally default, but is this still available?
 DisableLockScreenBlur           # EnableLockScreenBlur
 # DisableAeroShake              # EnableAeroShake
 DisableAccessibilityKeys        # EnableAccessibilityKeys
