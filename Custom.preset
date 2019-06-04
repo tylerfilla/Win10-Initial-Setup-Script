@@ -1,0 +1,226 @@
+##########
+# Win 10 / Server 2016 / Server 2019 Initial Setup Script - tsf preset
+# Author: Disassembler <disassembler@dasm.cz>, Tyler Filla <tylerfilla@hotmail.com>
+# Version: v3.7-a, 2019-06-04 (version of preset, not original script)
+# Source: https://github.com/tylerfilla/Win10-Initial-Setup-Script
+# Forked from: https://github.com/Disassembler0/Win10-Initial-Setup-Script
+# Forked from version: v3.7, 2019-05-31
+##########
+
+########## WARNING WARNING WARNING :: THIS IS A CUSTOM FORK ##########
+#   I have created this preset to boost my own productivity. YMMV.   #
+######################################################################
+
+### Require administrator privileges ###
+RequireAdmin
+
+### Privacy Tweaks ###
+DisableTelemetry                # EnableTelemetry
+DisableWiFiSense                # EnableWiFiSense
+# DisableSmartScreen            # EnableSmartScreen
+DisableWebSearch                # EnableWebSearch
+DisableAppSuggestions           # EnableAppSuggestions
+DisableActivityHistory          # EnableActivityHistory
+DisableBackgroundApps           # EnableBackgroundApps
+DisableLocationTracking,        # EnableLocationTracking        # TODO(tyler): Originally default, but is this still available?
+# DisableSensors                # EnableSensors
+DisableLocation                 # EnableLocation
+DisableMapUpdates               # EnableMapUpdates
+DisableFeedback                 # EnableFeedback
+DisableTailoredExperiences      # EnableTailoredExperiences
+DisableAdvertisingID            # EnableAdvertisingID
+DisableWebLangList              # EnableWebLangList
+DisableCortana                  # EnableCortana
+# DisableBiometrics             # EnableBiometrics
+# DisableCamera                 # EnableCamera
+DisableErrorReporting           # EnableErrorReporting
+# SetP2PUpdateLocal             # SetP2PUpdateInternet          # SetP2PUpdateDisable
+DisableDiagTrack                # EnableDiagTrack
+DisableWAPPush                  # EnableWAPPush
+# EnableClearRecentFiles        # DisableClearRecentFiles
+# DisableRecentFiles            # EnableRecentFiles
+
+### Security Tweaks ###
+# SetUACLow                     # SetUACHigh
+# EnableSharingMappedDrives     # DisableSharingMappedDrives
+DisableAdminShares              # EnableAdminShares
+# DisableSMB1                   # EnableSMB1
+# DisableSMBServer              # EnableSMBServer
+# DisableNetBIOS                # EnableNetBIOS
+# DisableLLMNR                  # EnableLLMNR
+# DisableNCSIProbe              # EnableNCSIProbe
+SetCurrentNetworkPrivate        # SetCurrentNetworkPublic
+# SetUnknownNetworksPrivate     # SetUnknownNetworksPublic
+# DisableConnectionSharing      # EnableConnectionSharing
+# DisableNetDevicesAutoInst     # EnableNetDevicesAutoInst
+# DisableFirewall               # EnableFirewall
+# HideDefenderTrayIcon          # ShowDefenderTrayIcon
+# DisableDefender               # EnableDefender
+# DisableDefenderCloud          # EnableDefenderCloud
+# EnableCtrldFolderAccess       # DisableCtrldFolderAccess
+# EnableCIMemoryIntegrity       # DisableCIMemoryIntegrity
+# EnableDefenderAppGuard        # DisableDefenderAppGuard
+HideAccountProtectionWarn       # ShowAccountProtectionWarn
+# DisableDownloadBlocking       # EnableDownloadBlocking
+EnableScriptHost                # DisableScriptHost             # tsf set on 13 July 2018
+EnableDotNetStrongCrypto        # DisableDotNetStrongCrypto
+# EnableMeltdownCompatFlag      # DisableMeltdownCompatFlag
+EnableF8BootMenu                # DisableF8BootMenu
+# DisableBootRecovery           # EnableBootRecovery
+# DisableRecoveryAndReset       # EnableRecoveryAndReset
+SetDEPOptOut                    # SetDEPOptIn
+
+### Service Tweaks ###
+# DisableUpdateMSRT             # EnableUpdateMSRT
+# DisableUpdateDriver           # EnableUpdateDriver
+# DisableUpdateAutoDownload     # EnableUpdateAutoDownload
+DisableMaintenanceWakeUp        # EnableMaintenanceWakeUp
+DisableUpdateRestart,           # EnableUpdateRestart           # TODO(tyler): Originally default, but is this still available?
+# DisableHomeGroups             # EnableHomeGroups
+DisableSharedExperiences        # EnableSharedExperiences
+# EnableClipboardHistory        # DisableClipboardHistory
+DisableRemoteAssistance         # EnableRemoteAssistance
+EnableRemoteDesktop             # DisableRemoteDesktop
+DisableAutoplay                 # EnableAutoplay
+DisableAutorun                  # EnableAutorun
+# DisableRestorePoints          # EnableRestorePoints
+# EnableStorageSense            # DisableStorageSense
+# DisableDefragmentation        # EnableDefragmentation
+# DisableSuperfetch             # EnableSuperfetch
+# DisableIndexing               # EnableIndexing
+# DisableSwapFile               # EnableSwapFile
+EnableNTFSLongPaths             # DisableNTFSLongPaths
+# DisableNTFSLastAccess         # EnableNTFSLastAccess
+SetBIOSTimeUTC                  # SetBIOSTimeLocal              # tsf set on 4 June 2019
+EnableHibernation               # DisableHibernation            # tsf set on 4 June 2019
+# DisableSleepButton            # EnableSleepButton
+# DisableSleepTimeout           # EnableSleepTimeout
+# DisableFastStartup            # EnableFastStartup
+# DisableAutoRebootOnCrash      # EnableAutoRebootOnCrash
+
+### UI Tweaks ###
+EnableActionCenter              # DisableActionCenter           # tsf set on 2 August 2018
+HideAccountProtectionWarn       # ShowAccountProtectionWarn     # TODO(tyler): Originally default, but is this still available?
+EnableLockScreen                # DisableLockScreen             # tsf set on 7 July 2018
+# DisableLockScreenRS1          # EnableLockScreenRS1
+HideNetworkFromLockScreen       # ShowNetworkOnLockScreen
+HideShutdownFromLockScreen      # ShowShutdownOnLockScreen
+DisableStickyKeys               # EnableStickyKeys              # TODO(tyler): Originally default, but is this still available?
+DisableLockScreenBlur           # EnableLockScreenBlur
+# DisableAeroShake              # EnableAeroShake
+DisableAccessibilityKeys        # EnableAccessibilityKeys
+ShowTaskManagerDetails          # HideTaskManagerDetails
+ShowFileOperationsDetails       # HideFileOperationsDetails
+# EnableFileDeleteConfirm       # DisableFileDeleteConfirm
+HideTaskbarSearch               # ShowTaskbarSearchIcon         # ShowTaskbarSearchBox
+HideTaskView                    # ShowTaskView
+ShowLargeTaskbarIcons           # ShowSmallTaskbarIcons         # tsf set on 7 July 2018
+SetTaskbarCombineWhenFull       # SetTaskbarCombineNever        # SetTaskbarCombineAlways
+HideTaskbarPeopleIcon           # ShowTaskbarPeopleIcon
+HideTrayIcons                   # ShowTrayIcons                 # tsf set on 7 July 2018
+DisableSearchAppInStore         # EnableSearchAppInStore
+DisableNewAppPrompt             # EnableNewAppPrompt
+# HideRecentlyAddedApps         # ShowRecentlyAddedApps
+# HideMostUsedApps              # ShowMostUsedApps
+# SetControlPanelSmallIcons     # SetControlPanelLargeIcons     # SetControlPanelCategories
+DisableShortcutInName           # EnableShortcutInName
+# HideShortcutArrow             # ShowShortcutArrow
+SetVisualFXAppearance           # SetVisualFXPerformance        # tsf set on 7 July 2018
+# EnableTitleBarColor           # DisableTitleBarColor
+# EnableDarkTheme               # DisableDarkTheme
+# AddENKeyboard                 # RemoveENKeyboard
+# EnableNumlock                 # DisableNumlock
+# DisableEnhPointerPrecision    # EnableEnhPointerPrecision
+# SetSoundSchemeNone            # SetSoundSchemeDefault
+# DisableStartupSound           # EnableStartupSound
+# DisableChangingSoundScheme    # EnableChangingSoundScheme
+# EnableVerboseStatus           # DisableVerboseStatus
+DisableF1HelpKey                # EnableF1HelpKey
+
+### Explorer UI Tweaks ###
+# ShowExplorerTitleFullPath     # HideExplorerTitleFullPath
+ShowKnownExtensions             # HideKnownExtensions
+HideHiddenFiles                 # ShowHiddenFiles               # tsf set on 7 July 2018
+# ShowSuperHiddenFiles          # HideSuperHiddenFiles
+# ShowEmptyDrives               # HideEmptyDrives
+# ShowFolderMergeConflicts      # HideFolderMergeConflicts
+EnableNavPaneExpand             # DisableNavPaneExpand
+# ShowNavPaneAllFolders         # HideNavPaneAllFolders
+# EnableFldrSeparateProcess     # DisableFldrSeparateProcess
+# EnableRestoreFldrWindows      # DisableRestoreFldrWindows
+# ShowEncCompFilesColor         # HideEncCompFilesColor
+# DisableSharingWizard          # EnableSharingWizard
+# HideSelectCheckboxes          # ShowSelectCheckboxes
+HideSyncNotifications           # ShowSyncNotifications
+HideRecentShortcuts             # ShowRecentShortcuts
+SetExplorerQuickAccess          # SetExplorerThisPC             # tsf set on 7 July 2018
+HideQuickAccess                 # ShowQuickAccess
+# HideRecycleBinFromDesktop     # ShowRecycleBinOnDesktop
+HideThisPCFromDesktop           # ShowThisPCFromDesktop         # tsf set on 7 July 2018
+# ShowUserFolderOnDesktop       # HideUserFolderFromDesktop
+# ShowControlPanelOnDesktop     # HideControlPanelFromDesktop
+# ShowNetworkOnDesktop          # HideNetworkFromDesktop
+HideDesktopFromThisPC           # ShowDesktopInThisPC
+# HideDesktopFromExplorer       # ShowDesktopInExplorer
+HideDocumentsFromThisPC         # ShowDocumentsInThisPC
+# HideDocumentsFromExplorer     # ShowDocumentsInExplorer
+HideDownloadsFromThisPC         # ShowDownloadsInThisPC
+# HideDownloadsFromExplorer     # ShowDownloadsInExplorer
+HideMusicFromThisPC             # ShowMusicInThisPC
+# HideMusicFromExplorer         # ShowMusicInExplorer
+HidePicturesFromThisPC          # ShowPicturesInThisPC
+# HidePicturesFromExplorer      # ShowPicturesInExplorer
+HideVideosFromThisPC            # ShowVideosInThisPC
+# HideVideosFromExplorer        # ShowVideosInExplorer
+Hide3DObjectsFromThisPC         # Show3DObjectsInThisPC
+# Hide3DObjectsFromExplorer     # Show3DObjectsInExplorer
+# HideIncludeInLibraryMenu      # ShowIncludeInLibraryMenu
+# HideGiveAccessToMenu          # ShowGiveAccessToMenu
+# HideShareMenu                 # ShowShareMenu
+# DisableThumbnails             # EnableThumbnails
+DisableThumbnailCache           # EnableThumbnailCache
+DisableThumbsDBOnNetwork        # EnableThumbsDBOnNetwork
+
+### Application Tweaks ###
+DisableOneDrive                 # EnableOneDrive
+UninstallOneDrive               # InstallOneDrive
+UninstallMsftBloat              # InstallMsftBloat
+UninstallThirdPartyBloat        # InstallThirdPartyBloat
+# UninstallWindowsStore         # InstallWindowsStore
+DisableXboxFeatures             # EnableXboxFeatures
+# DisableFullscreenOptims       # EnableFullscreenOptims
+DisableAdobeFlash               # EnableAdobeFlash
+DisableEdgePreload              # EnableEdgePreload
+DisableEdgeShortcutCreation     # EnableEdgeShortcutCreation
+DisableIEFirstRun               # EnableIEFirstRun
+DisableFirstLogonAnimation      # EnableFirstLogonAnimation
+DisableMediaSharing             # EnableMediaSharing
+# UninstallMediaPlayer          # InstallMediaPlayer
+# UninstallInternetExplorer     # InstallInternetExplorer
+# UninstallWorkFolders          # InstallWorkFolders
+# UninstallPowerShellV2         # InstallPowerShellV2
+# InstallLinuxSubsystem         # UninstallLinuxSubsystem
+# InstallHyperV                 # UninstallHyperV
+# InstallNET23                  # UninstallNET23
+SetPhotoViewerAssociation       # UnsetPhotoViewerAssociation
+AddPhotoViewerOpenWith          # RemovePhotoViewerOpenWith
+# UninstallPDFPrinter           # InstallPDFPrinter
+InstallXPSPrinter               # UninstallXPSPrinter           # tsf set on 7 July 2018
+RemoveFaxPrinter                # AddFaxPrinter
+# UninstallFaxAndScan           # InstallFaxAndScan
+
+### Server Specific Tweaks ###
+# HideServerManagerOnLogin      # ShowServerManagerOnLogin
+# DisableShutdownTracker        # EnableShutdownTracker
+# DisablePasswordPolicy         # EnablePasswordPolicy
+# DisableCtrlAltDelLogin        # EnableCtrlAltDelLogin
+# DisableIEEnhancedSecurity     # EnableIEEnhancedSecurity
+# EnableAudio                   # DisableAudio
+
+### Unpinning ###
+# UnpinStartMenuTiles
+# UnpinTaskbarIcons
+
+### Auxiliary Functions ###
+WaitForKey
+Restart
