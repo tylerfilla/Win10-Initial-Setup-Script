@@ -1,3 +1,11 @@
+# Win10-Initial-Setup-Script :: tsf fork
+
+This is my own personal fork of Disassembler0's great [Win10-Initial-Setup-Script](https://github.com/Disassembler0/Win10-Initial-Setup-Script) PowerShell script. I use this script on my fresh Windows 10 installs. The "tsf.preset" file contains my personal preferences for a Windows 10 desktop. My preferences boost my productivity, but YMMV.
+
+&nbsp;
+
+# Original README
+
 ## Contents
  - [Description](#description)
  - [Usage](#usage)
