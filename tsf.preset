@@ -150,7 +150,7 @@ EnableNavPaneExpand             # DisableNavPaneExpand
 HideSyncNotifications           # ShowSyncNotifications
 HideRecentShortcuts             # ShowRecentShortcuts
 SetExplorerQuickAccess          # SetExplorerThisPC             # tsf set on 7 July 2018
-HideQuickAccess                 # ShowQuickAccess
+ShowQuickAccess                 # HideQuickAccess               # tsf set on 4 June 2019
 # HideRecycleBinFromDesktop     # ShowRecycleBinOnDesktop
 HideThisPCFromDesktop           # ShowThisPCFromDesktop         # tsf set on 7 July 2018
 # ShowUserFolderOnDesktop       # HideUserFolderFromDesktop
@@ -174,8 +174,8 @@ Hide3DObjectsFromThisPC         # Show3DObjectsInThisPC
 # HideGiveAccessToMenu          # ShowGiveAccessToMenu
 # HideShareMenu                 # ShowShareMenu
 # DisableThumbnails             # EnableThumbnails
-DisableThumbnailCache           # EnableThumbnailCache
-DisableThumbsDBOnNetwork        # EnableThumbsDBOnNetwork
+EnableThumbnailCache            # DisableThumbnailCache         # tsf set on 4 June 2019
+EnableThumbsDBOnNetwork         # DisableThumbsDBOnNetwork      # tsf set on 4 June 2019
 
 ### Application Tweaks ###
 DisableOneDrive                 # EnableOneDrive
@@ -195,15 +195,15 @@ DisableMediaSharing             # EnableMediaSharing
 # UninstallInternetExplorer     # InstallInternetExplorer
 # UninstallWorkFolders          # InstallWorkFolders
 # UninstallPowerShellV2         # InstallPowerShellV2
-# InstallLinuxSubsystem         # UninstallLinuxSubsystem
+InstallLinuxSubsystem           # UninstallLinuxSubsystem       # tsf set on 4 June 2019
 # InstallHyperV                 # UninstallHyperV
 # InstallNET23                  # UninstallNET23
 SetPhotoViewerAssociation       # UnsetPhotoViewerAssociation
 AddPhotoViewerOpenWith          # RemovePhotoViewerOpenWith
 # UninstallPDFPrinter           # InstallPDFPrinter
 InstallXPSPrinter               # UninstallXPSPrinter           # tsf set on 7 July 2018
-RemoveFaxPrinter                # AddFaxPrinter
-# UninstallFaxAndScan           # InstallFaxAndScan
+AddFaxPrinter                   # RemoveFaxPrinter              # tsf set on 4 June 2019
+InstallFaxAndScan               # UninstallFaxAndScan           # tsf set on 4 June 2019
 
 ### Server Specific Tweaks ###
 # HideServerManagerOnLogin      # ShowServerManagerOnLogin
