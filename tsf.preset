@@ -109,7 +109,7 @@ ShowTaskManagerDetails          # HideTaskManagerDetails
 ShowFileOperationsDetails       # HideFileOperationsDetails
 # EnableFileDeleteConfirm       # DisableFileDeleteConfirm
 ShowTaskbarSearchBox            # ShowTaskbarSearchIcon         # HideTaskbarSearch             # tsf set on 7 June 2019
-HideTaskView                    # ShowTaskView
+ShowTaskView                    # HideTaskView                  # tsf set on 10 July 2019
 ShowLargeTaskbarIcons           # ShowSmallTaskbarIcons         # tsf set on 7 July 2018
 SetTaskbarCombineWhenFull       # SetTaskbarCombineNever        # SetTaskbarCombineAlways
 HideTaskbarPeopleIcon           # ShowTaskbarPeopleIcon
