@@ -1,10 +1,10 @@
 ##########
 # Win 10 / Server 2016 / Server 2019 Initial Setup Script - tsf preset
 # Author: Disassembler <disassembler@dasm.cz>, Tyler Filla <tylerfilla@hotmail.com>
-# Version: v3.7-a, 2019-06-04 (version of preset, not original script)
+# Version: v3.8-a, 2020-01-30 (version of preset, not original script)
 # Source: https://github.com/tylerfilla/Win10-Initial-Setup-Script
 # Forked from: https://github.com/Disassembler0/Win10-Initial-Setup-Script
-# Forked from version: v3.7, 2019-05-31
+# Forked from version: v3.8, 2019-09-11
 ##########
 
 ########## WARNING WARNING WARNING :: THIS IS A CUSTOM FORK ##########
@@ -23,7 +23,7 @@ DisableAppSuggestions           # EnableAppSuggestions
 DisableActivityHistory          # EnableActivityHistory
 DisableBackgroundApps           # EnableBackgroundApps
 # DisableSensors                # EnableSensors
-DisableLocation                 # EnableLocation
+EnableLocation                  # DisableLocation               # tsf set on 20 January 2020
 DisableMapUpdates               # EnableMapUpdates
 DisableFeedback                 # EnableFeedback
 DisableTailoredExperiences      # EnableTailoredExperiences
@@ -43,15 +43,6 @@ DisableWAPPush                  # EnableWAPPush
 # SetUACLow                     # SetUACHigh
 # EnableSharingMappedDrives     # DisableSharingMappedDrives
 DisableAdminShares              # EnableAdminShares
-# DisableSMB1                   # EnableSMB1
-# DisableSMBServer              # EnableSMBServer
-# DisableNetBIOS                # EnableNetBIOS
-# DisableLLMNR                  # EnableLLMNR
-# DisableNCSIProbe              # EnableNCSIProbe
-SetCurrentNetworkPrivate        # SetCurrentNetworkPublic
-# SetUnknownNetworksPrivate     # SetUnknownNetworksPublic
-# DisableConnectionSharing      # EnableConnectionSharing
-# DisableNetDevicesAutoInst     # EnableNetDevicesAutoInst
 # DisableFirewall               # EnableFirewall
 # HideDefenderTrayIcon          # ShowDefenderTrayIcon
 # DisableDefender               # EnableDefender
@@ -69,16 +60,36 @@ EnableF8BootMenu                # DisableF8BootMenu
 # DisableRecoveryAndReset       # EnableRecoveryAndReset
 SetDEPOptOut                    # SetDEPOptIn
 
+### Network Tweaks ###
+SetCurrentNetworkPrivate        # SetCurrentNetworkPublic
+# SetUnknownNetworksPrivate     # SetUnknownNetworksPublic
+# DisableNetDevicesAutoInst     # EnableNetDevicesAutoInst
+# DisableHomeGroups             # EnableHomeGroups
+# DisableSMB1                   # EnableSMB1
+# DisableSMBServer              # EnableSMBServer
+# DisableNetBIOS                # EnableNetBIOS
+# DisableLLMNR                  # EnableLLMNR
+# DisableLLDP                   # EnableLLDP
+# DisableLLTD                   # EnableLLTD
+# DisableMSNetClient            # EnableMSNetClient
+# DisableQoS                    # EnableQoS
+# DisableIPv4                   # EnableIPv4
+# DisableIPv6                   # EnableIPv6
+# DisableNCSIProbe              # EnableNCSIProbe
+# DisableConnectionSharing      # EnableConnectionSharing
+EnableRemoteAssistance          # DisableRemoteAssistance       # tsf set on 30 January 2020
+EnableRemoteDesktop             # DisableRemoteDesktop          # tsf set on 30 January 2020
+
 ### Service Tweaks ###
 # DisableUpdateMSRT             # EnableUpdateMSRT
 # DisableUpdateDriver           # EnableUpdateDriver
+EnableUpdateMSProducts          # DisableUpdateMSProducts
 # DisableUpdateAutoDownload     # EnableUpdateAutoDownload
+DisableUpdateRestart            # EnableUpdateRestart
 DisableMaintenanceWakeUp        # EnableMaintenanceWakeUp
-# DisableHomeGroups             # EnableHomeGroups
+# DisableAutoRestartSignOn      # EnableAutoRestartSignOn
 DisableSharedExperiences        # EnableSharedExperiences
-# EnableClipboardHistory        # DisableClipboardHistory
-DisableRemoteAssistance         # EnableRemoteAssistance
-EnableRemoteDesktop             # DisableRemoteDesktop
+EnableClipboardHistory          # DisableClipboardHistory       # tsf set on 30 January 2020
 DisableAutoplay                 # EnableAutoplay
 DisableAutorun                  # EnableAutorun
 # DisableRestorePoints          # EnableRestorePoints
@@ -87,6 +98,7 @@ DisableAutorun                  # EnableAutorun
 # DisableSuperfetch             # EnableSuperfetch
 # DisableIndexing               # EnableIndexing
 # DisableSwapFile               # EnableSwapFile
+# DisableRecycleBin             # EnableRecycleBin
 EnableNTFSLongPaths             # DisableNTFSLongPaths
 # DisableNTFSLastAccess         # EnableNTFSLastAccess
 SetBIOSTimeUTC                  # SetBIOSTimeLocal              # tsf set on 4 June 2019
@@ -114,6 +126,7 @@ ShowLargeTaskbarIcons           # ShowSmallTaskbarIcons         # tsf set on 7 J
 SetTaskbarCombineWhenFull       # SetTaskbarCombineNever        # SetTaskbarCombineAlways
 HideTaskbarPeopleIcon           # ShowTaskbarPeopleIcon
 HideTrayIcons                   # ShowTrayIcons                 # tsf set on 7 July 2018
+ShowSecondsInTaskbar            # HideSecondsFromTaskbar        # tsf set on 30 January 2020
 DisableSearchAppInStore         # EnableSearchAppInStore
 DisableNewAppPrompt             # EnableNewAppPrompt
 # HideRecentlyAddedApps         # ShowRecentlyAddedApps
@@ -156,6 +169,7 @@ HideThisPCFromDesktop           # ShowThisPCFromDesktop         # tsf set on 7 J
 # ShowUserFolderOnDesktop       # HideUserFolderFromDesktop
 # ShowControlPanelOnDesktop     # HideControlPanelFromDesktop
 # ShowNetworkOnDesktop          # HideNetworkFromDesktop
+# ShowBuildNumberOnDesktop      # HideBuildNumberFromDesktop
 HideDesktopFromThisPC           # ShowDesktopInThisPC
 # HideDesktopFromExplorer       # ShowDesktopInExplorer
 HideDocumentsFromThisPC         # ShowDocumentsInThisPC
@@ -178,8 +192,8 @@ EnableThumbnailCache            # DisableThumbnailCache         # tsf set on 4 J
 EnableThumbsDBOnNetwork         # DisableThumbsDBOnNetwork      # tsf set on 4 June 2019
 
 ### Application Tweaks ###
-DisableOneDrive                 # EnableOneDrive
-UninstallOneDrive               # InstallOneDrive
+EnableOneDrive                  # DisableOneDrive               # tsf set on 30 January 2020
+InstallOneDrive                 # UninstallOneDrive             # tsf set on 30 January 2020
 UninstallMsftBloat              # InstallMsftBloat
 UninstallThirdPartyBloat        # InstallThirdPartyBloat
 # UninstallWindowsStore         # InstallWindowsStore
@@ -191,16 +205,19 @@ DisableEdgeShortcutCreation     # EnableEdgeShortcutCreation
 DisableIEFirstRun               # EnableIEFirstRun
 DisableFirstLogonAnimation      # EnableFirstLogonAnimation
 DisableMediaSharing             # EnableMediaSharing
+# EnableDeveloperMode           # DisableDeveloperMode
 # UninstallMediaPlayer          # InstallMediaPlayer
 # UninstallInternetExplorer     # InstallInternetExplorer
 # UninstallWorkFolders          # InstallWorkFolders
 # UninstallPowerShellV2         # InstallPowerShellV2
 InstallLinuxSubsystem           # UninstallLinuxSubsystem       # tsf set on 4 June 2019
-# InstallHyperV                 # UninstallHyperV
+InstallHyperV                   # UninstallHyperV               # tsf set on 30 January 2020
+# UninstallSSHClient            # InstallSSHClient
+# InstallSSHServer              # UninstallSSHServer
 # InstallNET23                  # UninstallNET23
 SetPhotoViewerAssociation       # UnsetPhotoViewerAssociation
 AddPhotoViewerOpenWith          # RemovePhotoViewerOpenWith
-# UninstallPDFPrinter           # InstallPDFPrinter
+InstallPDFPrinter               # UninstallPDFPrinter           # tsf set on 30 January 2020
 InstallXPSPrinter               # UninstallXPSPrinter           # tsf set on 7 July 2018
 AddFaxPrinter                   # RemoveFaxPrinter              # tsf set on 4 June 2019
 InstallFaxAndScan               # UninstallFaxAndScan           # tsf set on 4 June 2019
