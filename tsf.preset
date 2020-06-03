@@ -18,13 +18,13 @@ RequireAdmin
 DisableTelemetry                # EnableTelemetry
 DisableWiFiSense                # EnableWiFiSense
 # DisableSmartScreen            # EnableSmartScreen
-DisableWebSearch                # EnableWebSearch
+DisableWebSearch                # EnableWebSearch				# tsf kept on 2 June 2020
 DisableAppSuggestions           # EnableAppSuggestions
 DisableActivityHistory          # EnableActivityHistory
-DisableBackgroundApps           # EnableBackgroundApps
+EnableBackgroundApps            # DisableBackgroundApps         # tsf set on 2 June 2020
 # DisableSensors                # EnableSensors
 EnableLocation                  # DisableLocation               # tsf set on 20 January 2020
-DisableMapUpdates               # EnableMapUpdates
+EnableMapUpdates                # DisableMapUpdates             # tsf set on 2 June 2020
 DisableFeedback                 # EnableFeedback
 DisableTailoredExperiences      # EnableTailoredExperiences
 DisableAdvertisingID            # EnableAdvertisingID
@@ -32,6 +32,7 @@ DisableWebLangList              # EnableWebLangList
 DisableCortana                  # EnableCortana
 # DisableBiometrics             # EnableBiometrics
 # DisableCamera                 # EnableCamera
+# DisableMicrophone             # EnableMicrophone
 DisableErrorReporting           # EnableErrorReporting
 # SetP2PUpdateLocal             # SetP2PUpdateInternet          # SetP2PUpdateDisable
 DisableDiagTrack                # EnableDiagTrack
@@ -105,7 +106,7 @@ SetBIOSTimeUTC                  # SetBIOSTimeLocal              # tsf set on 4 J
 EnableHibernation               # DisableHibernation            # tsf set on 4 June 2019
 # DisableSleepButton            # EnableSleepButton
 # DisableSleepTimeout           # EnableSleepTimeout
-# DisableFastStartup            # EnableFastStartup
+DisableFastStartup              # EnableFastStartup             # tsf set on 2 June 2020
 # DisableAutoRebootOnCrash      # EnableAutoRebootOnCrash
 
 ### UI Tweaks ###
@@ -131,12 +132,14 @@ DisableSearchAppInStore         # EnableSearchAppInStore
 DisableNewAppPrompt             # EnableNewAppPrompt
 # HideRecentlyAddedApps         # ShowRecentlyAddedApps
 # HideMostUsedApps              # ShowMostUsedApps
+# SetWinXMenuPowerShell         # SetWinXMenuCmd
 # SetControlPanelSmallIcons     # SetControlPanelLargeIcons     # SetControlPanelCategories
 DisableShortcutInName           # EnableShortcutInName
 # HideShortcutArrow             # ShowShortcutArrow
 SetVisualFXAppearance           # SetVisualFXPerformance        # tsf set on 7 July 2018
 # EnableTitleBarColor           # DisableTitleBarColor
-# EnableDarkTheme               # DisableDarkTheme
+# SetAppsDarkMode               # SetAppsLightMode
+# SetSystemLightMode            # SetSystemDarkMode
 # AddENKeyboard                 # RemoveENKeyboard
 EnableNumlock                   # DisableNumlock                # tsf set on 7 June 2019
 # DisableEnhPointerPrecision    # EnableEnhPointerPrecision
@@ -169,6 +172,7 @@ HideThisPCFromDesktop           # ShowThisPCFromDesktop         # tsf set on 7 J
 # ShowUserFolderOnDesktop       # HideUserFolderFromDesktop
 # ShowControlPanelOnDesktop     # HideControlPanelFromDesktop
 # ShowNetworkOnDesktop          # HideNetworkFromDesktop
+# HideDesktopIcons              # ShowDesktopIcons
 # ShowBuildNumberOnDesktop      # HideBuildNumberFromDesktop
 HideDesktopFromThisPC           # ShowDesktopInThisPC
 # HideDesktopFromExplorer       # ShowDesktopInExplorer
@@ -194,10 +198,10 @@ EnableThumbsDBOnNetwork         # DisableThumbsDBOnNetwork      # tsf set on 4 J
 ### Application Tweaks ###
 EnableOneDrive                  # DisableOneDrive               # tsf set on 30 January 2020
 InstallOneDrive                 # UninstallOneDrive             # tsf set on 30 January 2020
-UninstallMsftBloat              # InstallMsftBloat
+# UninstallMsftBloat            # InstallMsftBloat              # tsf unset on 2 June 2020
 UninstallThirdPartyBloat        # InstallThirdPartyBloat
 # UninstallWindowsStore         # InstallWindowsStore
-DisableXboxFeatures             # EnableXboxFeatures
+EnableXboxFeatures              # DisableXboxFeatures           # tsf set on 2 June 2020
 # DisableFullscreenOptims       # EnableFullscreenOptims
 DisableAdobeFlash               # EnableAdobeFlash
 DisableEdgePreload              # EnableEdgePreload
@@ -205,15 +209,19 @@ DisableEdgeShortcutCreation     # EnableEdgeShortcutCreation
 DisableIEFirstRun               # EnableIEFirstRun
 DisableFirstLogonAnimation      # EnableFirstLogonAnimation
 DisableMediaSharing             # EnableMediaSharing
-# EnableDeveloperMode           # DisableDeveloperMode
+EnableDeveloperMode             # DisableDeveloperMode          # tsf set on 2 June 2020
 # UninstallMediaPlayer          # InstallMediaPlayer
 # UninstallInternetExplorer     # InstallInternetExplorer
 # UninstallWorkFolders          # InstallWorkFolders
+# UninstallHelloFace            # InstallHelloFace
+# UninstallMathRecognizer       # InstallMathRecognizer
 # UninstallPowerShellV2         # InstallPowerShellV2
+# UninstallPowerShellISE        # InstallPowerShellISE
 InstallLinuxSubsystem           # UninstallLinuxSubsystem       # tsf set on 4 June 2019
 InstallHyperV                   # UninstallHyperV               # tsf set on 30 January 2020
 # UninstallSSHClient            # InstallSSHClient
-# InstallSSHServer              # UninstallSSHServer
+InstallSSHServer                # UninstallSSHServer            # tsf set on 2 June 2020
+InstallTelnetClient             # UninstallTelnetClient         # tsf set on 2 June 2020
 # InstallNET23                  # UninstallNET23
 SetPhotoViewerAssociation       # UnsetPhotoViewerAssociation
 AddPhotoViewerOpenWith          # RemovePhotoViewerOpenWith
